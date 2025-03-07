@@ -2,3 +2,4 @@
 ^renv\.lock$
 ^airlinestats\.Rproj$
 ^\.Rproj\.user$
+^\.github$
