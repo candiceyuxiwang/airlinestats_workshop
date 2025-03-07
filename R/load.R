@@ -1,3 +1,7 @@
+#' function to load in air traffic data
+#' @param air_data_path data to load
+#' @param carrier_data_path city ID to name
+#' @param airport_data_path airport ID to name
 #' @export
 load_data <- function(air_data_path, carrier_data_path, airport_data_path){
   # first, we need to load the data

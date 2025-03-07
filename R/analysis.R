@@ -1,4 +1,8 @@
-# function for most popular air route
+#' function for most popular air route (bidirectional)
+#' @param df data with flight records
+#' @param origin_var variable denoting the origin airport or city
+#' @param dest_var variable denoting the destination airport or city
+#' @returns sorted list of busist routes
 #' @export
 busiest_routes <- function(df, origin_var, dest_var){
   stopifnot(all(df$Passengers>=1))
@@ -23,7 +27,11 @@ busiest_routes <- function(df, origin_var, dest_var){
   return(arrange(pairs, -Passengers))
 }
 
-# Now, we can compute the market shares
+#' Now, we can compute the airline market shares at each location
+#' @param df data with flight records
+#' @param carrier_var variable denoting the airline
+#' @param location_var variable denoting the airport or city
+#' @returns list of market shares
 #' @export
 biggest_market_share <- function(df, carrier_var, location_var){
   mkt_shares = df %>%
